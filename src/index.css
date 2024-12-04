@@ -5,7 +5,11 @@
 }
 
 body {
-  background-color: #000;
+  background-image: url(https://i.pinimg.com/originals/46/68/f3/4668f327cce98aaaef6f9ea05f6b2537.jpg);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
   display: flex;
   align-items: center;
   justify-content: center;

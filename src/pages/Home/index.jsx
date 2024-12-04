@@ -1,7 +1,8 @@
 import { useRef, useState } from "react";
-import { v4 } from "uuid";
-import { AddButton } from "./styles";
-import { Container } from "./styles";
+import { v4 } from "uuid"; //importação da biblioteca
+//importação dos estilos dos componentes
+import { AddButton, Product } from "./styles";
+import { Container, TrashButton } from "./styles";
 
 //React Hooks
 //useRef - colocar algo como referencia
@@ -33,10 +34,12 @@ function Home() {
       <AddButton onClick={cliqueiNoBotao}>Adicionar</AddButton>
 
       {produtos.map((produto) => (
-        <div key={produto.id}>
+        <Product key={produto.id}>
           <p>{produto.nome}</p>
-          <button onClick={() => deletarProduto(produto.id)}>Deletar</button>
-        </div>
+          <TrashButton onClick={() => deletarProduto(produto.id)}>
+            x
+          </TrashButton>
+        </Product>
       ))}
     </Container>
   );
